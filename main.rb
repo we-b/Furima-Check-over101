@@ -1,7 +1,7 @@
 # チェック項目のメソッドをまとめているファイル
 require './check_list'
 # ruby_jardはデバッグの際にのみ使用する。普段はコメントアウトする
-# require 'ruby_jard'
+ require 'ruby_jard'
 
 # メモ
 # 購入時に起こっていたエラー詳細
@@ -45,8 +45,7 @@ def main
   sign_up_password_string
   sign_up_password_integer
   # チェックがsign_up_retryに組み込まれているのでメソッドで分けたい。
-  # 【未実装】数字だけ、文字だけのパスワードで登録できるか検証する。
-  #check_23
+ 
   # 必須項目を入力して再登録
   sign_up_retry
   # トップメニュー → ログアウトする
@@ -1153,7 +1152,7 @@ def login_user2_item_buy
   # ログイン状態の出品者が、URLを直接入力して自身の出品した商品購入ページに遷移しようとすると、トップページに遷移すること
   check_5
   # ログアウト状態のユーザーは、URLを直接入力して商品購入ページに遷移しようとすると、商品の販売状況に関わらずログインページに遷移すること
-  check_22
+  check_21
 
   # check_22メソッドの中でログアウトしているためuser2でログイン
   login_any_user(@email2, @password)
